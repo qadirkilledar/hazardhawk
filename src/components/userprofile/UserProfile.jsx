@@ -60,7 +60,12 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div
+      className="min-h-screen"
+      style={{
+        background: "linear-gradient(to right, rgb(15, 23, 42), rgb(30, 41, 59), rgb(51, 65, 85))",
+      }}
+    >
       {/* Main Container */}
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Profile Header Card */}

@@ -33,7 +33,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="bg-white sticky top-0 z-50">
+    <div className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
           <Transition.Child
@@ -66,7 +66,7 @@ function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
-                    <RxCross2 />
+                    <RxCross2 size={24} />
                   </button>
                 </div>
                 <div className="border-t border-blue-800 px-4 py-6">
@@ -144,7 +144,7 @@ function Navbar() {
                   <div className="flow-root">
                     <Link to={"/user-profile"} className="block">
                       <img
-                        className="w-10 h-10 rounded-full border-2 border-white"
+                        className="w-12 h-12 rounded-full border-4 border-white hover:border-blue-300 transition-transform transform hover:scale-105"
                         src="https://res.cloudinary.com/drlkkozug/image/upload/v1705071144/y9evmbpdht5ezj3fkal9.jpg"
                         alt="user"
                       />
@@ -191,9 +191,9 @@ function Navbar() {
                   <img
                     src="https://res.cloudinary.com/drlkkozug/image/upload/v1705071145/thftfiyzg6c29p4d6vws.jpg"
                     alt="HazardHawk Logo"
-                    className="w-10 h-10"
+                    className="w-12 h-12 rounded-full border-2 border-blue-300"
                   />
-                  <h1 className="text-2xl font-bold text-white">HazardHawk</h1>
+                  <h1 className="text-3xl font-extrabold text-white">HazardHawk</h1>
                 </Link>
               </div>
 
@@ -201,7 +201,7 @@ function Navbar() {
                 {user && (
                   <Link
                     to={"/report"}
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Send Report
                   </Link>
@@ -209,14 +209,14 @@ function Navbar() {
 
                 <Link
                   to={"/community-posts"}
-                  className="text-white hover:text-blue-200 transition-colors"
+                  className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Community Posts
                 </Link>
 
                 <Link
                   to={"/emergency-resources"}
-                  className="text-white hover:text-blue-200 transition-colors"
+                  className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Emergency Resources
                 </Link>
@@ -224,7 +224,7 @@ function Navbar() {
                 {!user && (
                   <Link
                     to={"/signup"}
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Signup
                   </Link>
@@ -233,7 +233,7 @@ function Navbar() {
                 {user?.user?.email === ADMIN_EMAIL && (
                   <Link
                     to={"/dashboard"}
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Admin
                   </Link>
@@ -242,7 +242,7 @@ function Navbar() {
                 {department !== null && (
                   <Link
                     to={"/departments-reports"}
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Department Reports
                   </Link>
@@ -251,28 +251,17 @@ function Navbar() {
                 {user && (
                   <a
                     onClick={logout}
-                    className="text-white hover:text-blue-200 transition-colors cursor-pointer"
+                    className="text-white hover:text-blue-200 transition-colors cursor-pointer px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Logout
                   </a>
                 )}
-              </div>
 
-              <div className="flex items-center space-x-6">
-                <div className="hidden lg:flex items-center space-x-2">
+                <Link to={"/user-profile"} className="block">
                   <img
-                    src="https://ecommerce-sk.vercel.app/img/indiaflag.png"
-                    alt="Indian flag"
-                    className="h-5 w-auto"
-                  />
-                  <span className="text-white">INDIA</span>
-                </div>
-
-                <Link to={"/user-profile"}>
-                  <img
-                    className="w-10 h-10 rounded-full border-2 border-white hover:border-blue-200 transition-colors"
+                    className="w-12 h-12 rounded-full border-4 border-white hover:border-blue-300 transition-transform transform hover:scale-105"
                     src="https://res.cloudinary.com/drlkkozug/image/upload/v1705071144/y9evmbpdht5ezj3fkal9.jpg"
-                    alt="user profile"
+                    alt="user"
                   />
                 </Link>
               </div>
