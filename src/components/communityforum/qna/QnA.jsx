@@ -51,8 +51,7 @@ const QnA = () => {
     <div
       className="min-h-screen"
       style={{
-        backgroundImage:
-          "linear-gradient(to right, #0f172a, #1e293b, #334155)",
+        backgroundImage: "linear-gradient(to right, #0f172a, #1e293b, #334155)",
         color: "white",
         fontFamily: "Arial, sans-serif",
       }}
@@ -62,8 +61,8 @@ const QnA = () => {
           Frequently Asked Questions
         </h1>
         <p className="text-center text-gray-300 mb-12">
-          Welcome to our FAQ page! Here, you'll find answers to common
-          questions about HazardHawk.
+          Welcome to our FAQ page! Here, you'll find answers to common questions
+          about HazardHawk.
         </p>
 
         <div className="space-y-4">

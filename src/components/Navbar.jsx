@@ -160,7 +160,7 @@ function Navbar() {
       <header className="relative bg-white">
         <nav
           aria-label="Top"
-          className="bg-blue-900 px-4 sm:px-6 lg:px-8 shadow-lg"
+          className="bg-blue-500 px-4 sm:px-6 lg:px-8 shadow-lg"
         >
           <div className="mx-auto max-w-7xl">
             <div className="flex h-16 items-center justify-between">
@@ -193,7 +193,9 @@ function Navbar() {
                     alt="HazardHawk Logo"
                     className="w-12 h-12 rounded-full border-2 border-blue-300"
                   />
-                  <h1 className="text-3xl font-extrabold text-white">HazardHawk</h1>
+                  <h1 className="text-3xl font-extrabold text-white">
+                    HazardHawk
+                  </h1>
                 </Link>
               </div>
 
